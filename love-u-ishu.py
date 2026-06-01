@@ -1,23 +1,4 @@
-import random
-import streamlit as st
 
-# 1. Page Configuration (Modern Wide Layout)
-st.set_page_config(page_title="Be My Valentine? ❤️", layout="centered", page_icon="❤️")
-
-# 2. Modern UI Styling using Custom CSS
-st.markdown("""
-    <style>
-        /* Hide default Streamlit header/footer elements for a clean look */
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        
-        /* Main Container Styling */
-        .main-container {
-            text-align: center;
-            padding: 20px;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
         
         /* Typography */
         .title-text {
