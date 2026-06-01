@@ -1,0 +1,61 @@
+ import streamlit as st
+import time
+import random
+
+st.set_page_config(page_title="Security Alert", page_icon="⚠️")
+
+st.title("⚠️ SECURITY BREACH DETECTED")
+
+messages = [
+    "Connecting to device...",
+    "Bypassing security...",
+    "Retrieving account details...",
+    "Locating device...",
+    "Analyzing installed applications...",
+    "Checking camera permissions...",
+    "Checking WhatsApp access...",
+    "Uploading metadata...",
+]
+
+progress = st.progress(0)
+
+for i in range(100):
+    progress.progress(i + 1)
+    time.sleep(0.03)
+
+for msg in messages:
+    st.write("▶️", msg)
+    time.sleep(1)
+
+st.error("DEVICE IDENTIFIED")
+
+st.write("👤 Name: Ishita Karmakar")
+st.write("📍 Location: New Colony Kali Mandir, Parbelia")
+st.write("📱 Mobile Number: +91 7908607649")
+
+st.write("")
+
+fake_logs = st.empty()
+
+log_text = ""
+
+for i in range(25):
+    log_text += f"\n[{random.randint(1000,9999)}] ACCESS TOKEN VERIFIED"
+    fake_logs.code(log_text)
+    time.sleep(0.15)
+
+st.error("Camera Permission: GRANTED")
+st.error("WhatsApp Permission: GRANTED")
+st.error("Gallery Permission: GRANTED")
+
+st.warning("Preparing final report...")
+
+time.sleep(3)
+
+st.error("⚠️ DO NOT CLOSE THIS WINDOW ⚠️")
+
+secret = st.text_input("", type="password")
+
+if secret == "gotcha123":
+    st.balloons()
+    st.success("Uploading successful.")
